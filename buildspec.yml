@@ -14,7 +14,7 @@ phases:
       # run build script
       - npm run-script build
       - npm run provision
-      - npm run deploy
+      
   post_build:
     commands:
       - npm run deploy
@@ -24,8 +24,6 @@ artifacts:
   # include all files required to run application
   # notably excluded is node_modules, as this will cause overwrite error on deploy
   files:
-    - '**/*'
-      name: BuildArtifact
     - public/**/*
     - src/**/*
     - package.json
