@@ -14,7 +14,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "provision": "aws cloudformation deploy --template-file ./cloudformation_basic.yml --stack-name hosting-bucket --parameter-overrides BucketName=uniquebucketreactapp",
+    "provision": "aws cloudformation deploy --template-file ./cloudformation_basic.yml --stack-name myhostingbuddy --parameter-overrides BucketName=uniquebucketreactapp",
     "upload": "aws s3 sync build/ s3://uniquebucketreactapp --delete",
     "deploy": "npm run build && npm run upload"
   },
